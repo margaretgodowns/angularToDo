@@ -1,12 +1,16 @@
 function MainController($scope){
-  $scope.demo = "Hello";
   $scope.tasks = [];
-  console.log("something");
+  console.log("MainController function working");
 
   $scope.addTask = function(task){
     $scope.tasks.push(task);
     $scope.newTask = {};
-    console.log("another something");
+    console.log("addTask function working");
+  }
+
+  $scope.deleteTask = function(task){
+    $scope.tasks.splice($scope.lists.indexOf(task), 1);
+    console.log("deleteTask function working");
   }
 }
 
